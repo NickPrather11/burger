@@ -47,6 +47,14 @@ var orm = {
       if (err) throw err;
       cb(result);
     });
+  },
+  delete: function(condition, cb) {
+    var queryString = "DELETE FROM burgers WHERE ";
+    queryString += condition;
+    connection.query(queryString, function(err, result) {
+      if (err) throw err;
+      cb(result);
+    });
   }
 };
 

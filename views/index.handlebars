@@ -1,0 +1,20 @@
+<h1>!Burger Devourer!</h1>
+
+<h2>Devour These Burgers</h2>
+<ul>
+    {{#each burgers}}
+    {{#unless devoured}}
+    {{> burgers/burger-block devoured=false}}
+    {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>These Burgers Have Been Devoured</h2>
+
+<ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    {{> burgers/burger-block devoured=true}}
+    {{/if}}
+    {{/each}}
+</ul>

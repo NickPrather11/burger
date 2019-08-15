@@ -38,8 +38,6 @@ var orm = {
   },
   updateOne: function(objColVals, condition, cb) {
     var queryString = "UPDATE burgers SET ";
-
-    queryString += " SET ";
     queryString += objToSql(objColVals);
     queryString += " WHERE ";
     queryString += condition;

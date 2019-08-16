@@ -1,0 +1,16 @@
+.title {
+  justify-content: center;
+}
+
+.burgerImg {
+  justify-content: center;
+}
+
+.burgerTypes {
+  justify-content: space-between;
+  text-align: center;
+}
+
+.row {
+  margin: 10px;
+}

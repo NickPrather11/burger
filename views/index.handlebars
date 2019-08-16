@@ -1,37 +1,47 @@
-<h1>!Burger Devourer!</h1>
+<div class="container">
+    <div class="row title">
+        <h1>Burger Devourer!</h1>
 
-<h2>These Burgers Have Been Devoured</h2>
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-    {{/each}}
-</ul>
-
-
-<h2>Devour These Burgers</h2>
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers/burger-block devoured=false}}
-    {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="brgr">Burger Name:</label>
-        <input type="text" id="brgr" name="name">
     </div>
-
-    <div class="form-group">
-        <label for="devoured">Devoured?</label><br>
-        <input type="radio" name="devoured" value="0"> Devoured!<br>
-        <input type="radio" name="devoured" value="1"> Ready to eat
+    <div class="row burgerImg">
+        <img src="/assets/img/burger.png">
     </div>
+    <div class="row burgerTypes">
+        <div class="col-6-lg">
+            <h2>Undevoured</h2>
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=false}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-6-lg">
+            <h2>Devoured</h2>
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <h2>Add a Burger</h2>
+    <form class="create-form">
 
-    <button type="submit">Add Burger</button>
-</form>
+        <div class="form-group">
+            <label for="brgr">Burger Name:</label>
+            <input type="text" id="brgr" name="name">
+        </div>
+
+        <div class="form-group">
+            <label for="devoured">Devoured?</label><br>
+            <input type="radio" name="devoured" value="0"> Devoured!<br>
+            <input type="radio" name="devoured" value="1"> Undevoured
+        </div>
+
+        <button type="submit">Add Burger</button>
+    </form>
+</div>

@@ -1,5 +1,16 @@
+body {
+  background-image: url("/assets/img/Lettuce-Tomato-Onion.jpg");
+  background-size: 100%;
+}
+
+.textArea {
+  background-color: whitesmoke;
+  padding: 0.4rem;
+}
+
 .title {
   justify-content: center;
+  color: gold;
 }
 
 .burgerImg {
@@ -13,4 +24,13 @@
 
 .row {
   margin: 10px;
+  display: flex;
+}
+
+#addBrgrRow {
+  justify-content: center;
+}
+
+#addBrgr {
+  text-align: center;
 }

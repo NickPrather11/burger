@@ -5,4 +5,4 @@ User can add their "burger" and make use of buttons to "devour" it (moving it to
 
 Example gif: https://imgur.com/a/Hsa6Zw7
 
-Heroku deployment: (link still needed)
+Heroku deployment: https://stark-eyrie-85216.herokuapp.com/
